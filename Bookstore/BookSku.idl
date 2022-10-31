@@ -1,0 +1,8 @@
+namespace Bookstore
+{
+    runtimeclass BookSku : Windows.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        BookSku(String title);
+        String Title;
+    }
+}
