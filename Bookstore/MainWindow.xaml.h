@@ -17,6 +17,7 @@ namespace winrt::Bookstore::implementation
         Bookstore::BookstoreViewModel MainViewModel();
 
         void ClickHandler(Windows::Foundation::IInspectable const&, Microsoft::UI::Xaml::RoutedEventArgs const&);
+        void Book_SelectionChanged(Windows::Foundation::IInspectable const&, Microsoft::UI::Xaml::RoutedEventArgs const&);
     private:
         Bookstore::BookstoreViewModel m_mainViewModel;
 

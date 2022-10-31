@@ -9,6 +9,5 @@ namespace Bookstore
         Int32 MyProperty;
         BookstoreViewModel MainViewModel{ get; };
         
-        
     }
 }

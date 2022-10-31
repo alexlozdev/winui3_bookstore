@@ -8,5 +8,6 @@ namespace Bookstore
         BookstoreViewModel();
         BookSku BookSku{ get; };
         Windows.Foundation.Collections.IObservableVector<BookSku> BookSkus{ get; };
+        Int32 SelectedIndex;
     }
 }

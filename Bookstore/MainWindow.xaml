@@ -9,8 +9,8 @@
 
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-        <Button Click="ClickHandler" Content="{x:Bind MainViewModel.BookSku.Title, Mode=OneWay}"/>
-        <ListBox ItemsSource="{x:Bind MainViewModel.BookSkus}">
+        <Button x:Name="button2" Click="ClickHandler" Content="{x:Bind MainViewModel.BookSku.Title, Mode=OneWay}"/>
+        <ListBox x:Name="bookListBox" ItemsSource="{x:Bind MainViewModel.BookSkus}" SelectionChanged="Book_SelectionChanged" SelectedIndex="{x:Bind MainViewModel.SelectedIndex}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate x:DataType="local:BookSku">
                     <TextBlock Text="{x:Bind Title, Mode=OneWay}"/>

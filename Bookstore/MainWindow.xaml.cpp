@@ -40,6 +40,11 @@ namespace winrt::Bookstore::implementation
         MainViewModel().BookSkus().Append(winrt::make<Bookstore::implementation::BookSku>(L"Moby Dick2"));
     }
 
+    void MainWindow::Book_SelectionChanged(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
+    {        
+        int index = bookListBox().SelectedIndex();        
+    }
+
     Bookstore::BookstoreViewModel MainWindow::MainViewModel()
     {
         return m_mainViewModel;
