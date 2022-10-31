@@ -13,7 +13,8 @@ using namespace Microsoft::UI::Xaml;
 namespace winrt::Bookstore::implementation
 {
     MainWindow::MainWindow()
-    {        
+    {
+        m_mainViewModel = winrt::make<Bookstore::implementation::BookstoreViewModel>();
         InitializeComponent();
     }
 
