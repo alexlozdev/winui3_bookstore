@@ -11,8 +11,11 @@ namespace winrt::Bookstore::implementation
 
         Bookstore::BookSku BookSku();
 
+        Windows::Foundation::Collections::IObservableVector<Bookstore::BookSku> BookSkus();
+
     private:
         Bookstore::BookSku m_bookSku{ nullptr };
+        Windows::Foundation::Collections::IObservableVector<Bookstore::BookSku> m_bookSkus;
     };
 }
 namespace winrt::Bookstore::factory_implementation

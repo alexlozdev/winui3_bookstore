@@ -10,8 +10,14 @@
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
         <Button Click="ClickHandler" Content="{x:Bind MainViewModel.BookSku.Title, Mode=OneWay}"/>
-        
+        <ListBox ItemsSource="{x:Bind MainViewModel.BookSkus}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="local:BookSku">
+                    <TextBlock Text="{x:Bind Title, Mode=OneWay}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListBox>
 
-        
+
     </StackPanel>
 </Window>
